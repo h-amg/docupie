@@ -1,0 +1,72 @@
+[
+    {
+      "name": "invoiceDate",
+      "type": "string",
+      "description": "The date when the invoice was issued."
+    },
+    {
+      "name": "dueDate",
+      "type": "string",
+      "description": "The date when payment of the invoice is due"
+    },
+    {
+      "name": "purchaseOrderNumber",
+      "type": "number",
+      "description": "The purchase order number for the invoice."
+    
+    },
+    {
+      "name": "invoiceNumber",
+      "type": "number",
+      "description": "The invoice number for the invoice."
+    },
+    {
+      "name": "paymentMemo",
+      "type": "string",
+      "description": "The payment memo, description or details of the invoice."
+    },
+    {
+      "name": "business",
+      "type": "object",
+      "description": "The business issuing the invoice.",
+      "children": [
+        { "name": "name", "type": "string", "description": "The name of the business issuing the invoice." },
+        { "name": "email", "type": "string", "description": "The email address of the business." },
+        { "name": "address", "type": "string", "description": "Address of the business." },
+        { "name": "phoneNumber", "type": "string", "description": "Phone number of the business." }
+      ]
+    },
+    {
+      "name": "customer",
+      "type": "object",
+      "description": "The customer receiving the invoice.",
+      "children": [
+        { "name": "name", "type": "string", "description": "The name of the customer." },
+        { "name": "email", "type": "string", "description": "The email address of the customer." },
+        { "name": "address", "type": "string", "description": "Address of the customer." },
+        { "name": "phoneNumber", "type": "string", "description": "Phone number of the customer." }
+      ]
+    },
+    {
+      "name": "amount",
+      "type": "object",
+      "description": "The customer receiving the invoice.",
+      "children": [
+        { "name": "subtotal", "type": "number", "description": "The subtotal amount for the invoice." },
+        { "name": "taxAmount", "type": "number", "description": "The tax amount for the invoice." },
+        { "name": "taxPercentage", "type": "number", "description": "The tax percentage for the invoice." },
+        { "name": "totalAmount", "type": "number", "description": "The total amount due." }
+      ]
+    },
+    {
+      "name": "items",
+      "type": "array",
+      "description": "The customer receiving the invoice.",
+      "children": [
+        { "name": "name", "type": "string", "description": "The name of the item." },
+        { "name": "quantity", "type": "number", "description": "The quantity of the item." },
+        { "name": "unitPrice", "type": "number", "description": "The unit price of the item." },
+        { "name": "total", "type": "number", "description": "The total amount of the item." }
+      ]
+    }
+  ]

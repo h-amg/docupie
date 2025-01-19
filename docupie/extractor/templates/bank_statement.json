@@ -1,0 +1,81 @@
+[
+    {
+      "name": "statementPeriod",
+      "type": "string",
+      "description": "The duration or period of time the bank statement covers."
+    },
+    {
+      "name": "accountHolder",
+      "type": "string",
+      "description": "The full name of the account holder."
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "description": "The address of the account holder."
+    },
+    {
+      "name": "sortCode",
+      "type": "string",
+      "description": "The sort code of the account holder." 
+    },
+    {
+      "name": "accountNumber",
+      "type": "string",
+      "description": "The account number of the account holder." 
+    },
+    {
+      "name": "moneyIn",
+      "type": "number",
+      "description": "The total amount of money that went in to the bank statement." 
+    },
+    {
+      "name": "moneyOut",
+      "type": "number",
+      "description": "The total amount of money that went out of the bank statement." 
+    },
+    {
+      "name": "openingBalance",
+      "type": "number",
+      "description": "The balance at the beginning of the period."
+    },
+    {
+      "name": "closingBalance",
+      "type": "number",
+      "description": "The balance at the end of the period."
+
+    },
+    {
+        "name": "transactions",
+        "type": "array",
+        "description": "List of transactions in the statement.",
+        "children": [
+          {
+            "name": "date",
+            "type": "string",
+            "description": "Transaction date."
+          },
+          {
+            "name": "moneyIn",
+            "type": "number",
+            "description": "Money in of the transaction."
+          },
+          {
+            "name": "moneyOut",
+            "type": "number",
+            "description": "Money out of the transaction."
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "The transaction description."
+          },
+          {
+            "name": "balance",
+            "type": "number",
+            "description": "The balance of the transaction."
+          }
+        ]
+      }
+  ]
+  

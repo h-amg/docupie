@@ -1,0 +1,7 @@
+pytesseract==0.3.13
+Spire.Doc==13.1.0
+plum-dispatch==1.7.4
+openai==1.59.8
+requests==2.32.3
+pdf2image==1.17.0
+

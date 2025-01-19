@@ -1,0 +1,38 @@
+[
+    {
+      "name": "fullName",
+      "type": "string",
+      "description": "The full name of the driving licence holder at number 1 and 2."
+    },
+    {
+      "name": "dob",
+      "type": "string",
+      "description": "The date of birth of the driving licence holder at number 3."
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "description": "The address of the driving licence holder."
+    },
+    {
+      "name": "issuingAuthority",
+      "type": "string",
+      "description": "The institution that issued the driving licence at number 4c ."
+    },
+    {
+      "name": "expirationDate",
+      "type": "string",
+      "description": "The date of expiry of the driving licence at number 4b."
+    
+    },
+    {
+      "name": "placeOfBirth",
+      "type": "string",
+      "description": "The place of birth of the driving licence holder."
+    },
+    {
+      "name": "licenseNumber",
+      "type": "string",
+      "description": "The number of the driving licence at number 5."
+    }
+  ]
