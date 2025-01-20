@@ -15,24 +15,12 @@ class LLMParams(BaseModel):
     temperature: Optional[float] = None
     top_p: Optional[float] = None
 
-class DocumindArgs(BaseModel):
-    cleanup: Optional[bool] = None
-    concurrency: Optional[int] = None
-    file_path: str
-    llm_params: Optional[LLMParams] = None
-    maintain_format: Optional[bool] = None
-    model: Optional[ModelOptions] = None
-    openai_api_key: Optional[str] = None
-    output_dir: Optional[str] = None
-    pages_to_convert_as_images: Optional[Union[int, List[int]]] = None
-    temp_dir: Optional[str] = None
-
 class Page(BaseModel):
     content: str
     content_length: int
     page: int
 
-class DocumindOutput(BaseModel):
+class DocupieOutput(BaseModel):
     completion_time: float
     file_name: str
     input_tokens: int

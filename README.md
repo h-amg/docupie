@@ -1,8 +1,4 @@
 
-<a href="https://discord.gg/w2Ejj36hRU">
-  <img src="https://user-images.githubusercontent.com/31022056/158916278-4504b838-7ecb-4ab9-a900-7dc002aade78.png" alt="Join us on Discord" width="200px">
-</a>
-
 # Docupie
 
 **`Docupie`** is an advanced document processing tool that leverages AI to extract structured data from PDFs. It is built to handle PDF conversions, extract relevant information, and format results as specified by customizable schemas.
@@ -263,6 +259,8 @@ This project is licensed under the AGPL v3.0 License.
 
 ## **Credit**
 
-This repo was built on top of [Zerox](https://github.com/getomni-ai/zerox). The MIT license from Zerox is included in the core folder and is also mentioned in the root license file.
+This project is a Python port of the [Documind](https://github.com/DocumindHQ/documind) package. We extend our gratitude to the Documind team for their work, which served as the foundation for **`Docupie`**. This project is published under the AGPLv3 license as defined in the [LICENSE](LICENSE) file.
+
+This repo was also built on top of [Zerox](https://github.com/getomni-ai/zerox). The MIT license from Zerox is included in the core folder and is also mentioned in the root license file.
 
 ---

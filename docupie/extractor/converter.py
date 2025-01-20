@@ -1,4 +1,4 @@
-from ..core import documind
+from ..core import Docupie
 from .utils import generate_markdown_document
 import os
 import logging
@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 async def convert_file(file_path, model):
     try:
-        result = await documind(
+        result = await Docupie(
             file_path=file_path,
             model=model,
             openai_api_key=os.environ.get('OPENAI_API_KEY')
@@ -23,4 +23,4 @@ async def convert_file(file_path, model):
             'file_name': file_name
         }
     except Exception as error:
-        logger.error('Error running documind core: %s', error)
+        logger.error('Error running Docupie core: %s', error)

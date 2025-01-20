@@ -13,10 +13,10 @@ from .utils import (
     validate_llm_params
 )
 from .openai import get_completion
-from .models import ModelOptions, DocumindArgs, DocumindOutput
+from .models import ModelOptions, DocupieOutput
 logger = logging.getLogger(__name__)
 
-async def documind(
+async def Docupie(
     cleanup: bool = True,
     concurrency: int = 10,
     file_path: str = None,
@@ -27,7 +27,7 @@ async def documind(
     output_dir: Optional[str] = None,
     pages_to_convert_as_images: Union[int, List[int]] = -1,
     temp_dir: str = None
-) -> DocumindOutput:
+) -> DocupieOutput:
     
     base_url = os.getenv('BASE_URL', 'https://api.openai.com/v1')
     default_model = (
@@ -51,7 +51,7 @@ async def documind(
 
     # Ensure temp directory exists + create temp folder
     rand = str(random.randint(1000, 9999))
-    temp_directory = Path(temp_dir or os.path.expanduser('~/tmp')) / f"documind-file-{rand}"
+    temp_directory = Path(temp_dir or os.path.expanduser('~/tmp')) / f"Docupie-file-{rand}"
     os.makedirs(temp_directory, exist_ok=True)
 
     # Download the PDF. Get file name.
