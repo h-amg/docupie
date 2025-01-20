@@ -263,6 +263,8 @@ This project is licensed under the AGPL v3.0 License.
 
 ## **Credit**
 
-This repo was built on top of [Zerox](https://github.com/getomni-ai/zerox). The MIT license from Zerox is included in the core folder and is also mentioned in the root license file.
+This project is a Python port of the [Documind](https://github.com/DocumindHQ/documind) package. We extend our gratitude to the Documind team for their work, which served as the foundation for **`Docupie`**. This project is published under the AGPLv3 license as defined in the [LICENSE](LICENSE) file.
+
+This repo was also built on top of [Zerox](https://github.com/getomni-ai/zerox). The MIT license from Zerox is included in the core folder and is also mentioned in the root license file.
 
 ---
