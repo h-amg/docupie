@@ -59,7 +59,7 @@ sudo apt-get install -y ghostscript graphicsmagick
 
 ### **Python**
 
-Ensure Python 3.8+ is installed on your system.
+Ensure Python 3.10.4+ is installed on your system.
 
 ## **Installation**
 
