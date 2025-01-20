@@ -3,14 +3,12 @@ from ..utils import is_valid_file
 from ..utils import validate_schema
 from .templates import get_template
 from typing import Optional, Dict, Any
-from pydantic import BaseModel
 import logging
 logger = logging.getLogger(__name__)
 
 async def extract(
     file: str,
     schema: Optional[Dict] = None,
-    pydantic_schema: Optional[BaseModel] = None,
     template: Optional[str] = None,
     model: Optional[str] = None,
     auto_schema: bool = False
@@ -46,8 +44,6 @@ async def extract(
             if not is_valid:
                 raise ValueError(f"Invalid schema format: {', '.join(errors)}")
             final_schema = schema  # Use custom schema
-        elif pydantic_schema:
-            final_schema = pydantic_schema
         elif not auto_schema:
             # If neither schema nor template is provided and auto_schema is not enabled, throw an error
             raise ValueError("You must provide a schema, template, or enable auto_schema.")

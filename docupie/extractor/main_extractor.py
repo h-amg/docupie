@@ -4,7 +4,6 @@ import logging
 from .utils import autogenerate_schema
 from .utils import convert_to_schema
 from .converter import convert_file
-from pydantic import BaseModel
 logger = logging.getLogger(__name__)
 
 openai = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
@@ -35,12 +34,8 @@ async def extract_data(pdf_file_path, schema_definition, model, auto_schema):
             if not final_schema:
                 raise Exception("Failed to auto-generate schema.")
 
-        # check if the final schema is not a pydantic Basemodel
-        if isinstance(final_schema, BaseModel):
-            dynamic_pydantic_schema = final_schema
-        else:
-            # Convert the schema (whether generated or passed) to pydantic
-            dynamic_pydantic_schema = convert_to_schema(final_schema)
+        # Convert the schema (whether generated or passed) to pydantic
+        dynamic_pydantic_schema = convert_to_schema(final_schema)
 
         completion = await openai.beta.chat.completions.parse(
             model="gpt-4o-2024-08-06",
