@@ -148,7 +148,7 @@ schema = [
 Use **`Docupie`** to process a PDF by passing the file URL and the schema.
 
 ```python
-from Docupie import extract
+from docupie import extract
 
 async def run_extraction():
     result = await extract(
